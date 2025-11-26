@@ -10,12 +10,24 @@ include __DIR__ . '/../config/conexion.php';
 $rol = $_SESSION['rol'];
 $id_usuario = $_SESSION['id_usuario'];
 
-// Si es admin, ve todos; si no, solo los suyos
-$sql = ($rol === 'admin')
-    ? "SELECT * FROM documentos"
-    : "SELECT * FROM documentos WHERE id_usuario = $id_usuario";
+$buscar = isset($_GET['buscar']) ? $conexion->real_escape_string($_GET['buscar']) : '';
+
+// Consulta base
+if ($rol === 'admin') {
+    $sql = "SELECT * FROM documentos";
+} else {
+    $sql = "SELECT * FROM documentos WHERE id_usuario = $id_usuario";
+}
+
+// Agregar filtro de búsqueda
+if (!empty($buscar)) {
+    $sql .= ($rol === 'admin')
+        ? " WHERE titulo LIKE '%$buscar%' OR descripcion LIKE '%$buscar%'"
+        : " AND (titulo LIKE '%$buscar%' OR descripcion LIKE '%$buscar%')";
+}
 
 $resultado = $conexion->query($sql);
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -27,6 +39,12 @@ $resultado = $conexion->query($sql);
 <body>
     
     <h2>📂 Lista de Documentos</h2>
+    <form method="GET" style="text-align:center; margin-bottom:20px;">
+        <input type="text" name="buscar" placeholder="Buscar documento..." 
+            value="<?= isset($_GET['buscar']) ? $_GET['buscar'] : '' ?>">
+        <button type="submit">🔎 Buscar</button>
+    </form>
+
 
     <table border="1" style="margin:auto; border-collapse: collapse;">
         <tr>
