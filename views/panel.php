@@ -14,7 +14,8 @@ if (!isset($_SESSION['id_usuario'])) {
 </head>
 <body>
     <div class="container">
-    <h2>Bienvenido, <?php echo $_SESSION['usuario']; ?> 👋</h2>
+    <img src="../documentos/SanBenitoMenni.png" alt="San Benito Menni" width="200" style="display:block; margin:auto;">
+    <h2>Bienvenido, <?php echo $_SESSION['usuario']; ?> 👋</h2>   
     <p>Rol: <?php echo $_SESSION['rol']; ?></p>
 
     <a href="subir.php">📂 Subir documento</a><br>

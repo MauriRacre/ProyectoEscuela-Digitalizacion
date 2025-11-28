@@ -37,8 +37,7 @@ $resultado = $conexion->query($sql);
     <link rel="stylesheet" href="../css/estilos.css">
 </head>
 <body>
-    
-    <h2>📂 Lista de Documentos</h2>
+    <h2><img src="../documentos/SanBenitoMenni.png" alt="Logo" width="60" style="vertical-align:middle; margin-right:10px;"> Lista de Documentos</h2>
     <form method="GET" style="text-align:center; margin-bottom:20px;">
         <input type="text" name="buscar" placeholder="Buscar documento..." 
             value="<?= isset($_GET['buscar']) ? $_GET['buscar'] : '' ?>">

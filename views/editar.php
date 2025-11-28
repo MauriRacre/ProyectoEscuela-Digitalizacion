@@ -26,7 +26,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </head>
 <body class="bg-light">
 <div class="container mt-5">
-    <h2 class="text-center mb-4">✏️ Editar Documento</h2>
+    <img src="../documentos/SanBenitoMenni.png" alt="San Benito Menni" width="120" style="display:block; margin:auto;">
+    <h2 class="text-center mb-4"> Editar Documento</h2>
 
     <form method="POST" class="bg-white p-4 rounded shadow-sm">
         <div class="mb-3">

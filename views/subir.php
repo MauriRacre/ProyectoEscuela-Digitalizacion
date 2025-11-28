@@ -14,7 +14,7 @@ if (!isset($_SESSION['id_usuario'])) {
 </head>
 <body>
     <div class="container"> 
-        <h2>📤 Subir Documento</h2>
+        <h2><img src="../documentos/SanBenitoMenni.png" alt="Logo" width="40" style="vertical-align:middle; margin-right:10px;"> Subir Documento</h2>
         <form action="../controllers/subirController.php" method="POST" enctype="multipart/form-data">
             <label>Título:</label>
             <input type="text" name="titulo" required><br>

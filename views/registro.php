@@ -7,6 +7,7 @@
 </head>
 <body>
     <div class="container">
+        <img src="../documentos/SanBenitoMenni.png" alt="San Benito Menni" width="120" style="display:block; margin:auto;">
         <h2>Registro de Usuario</h2>
         <form action="../controllers/registroController.php" method="POST">
             <label>Nombre de usuario:</label>

@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Iniciar Sesión</title>
-    <link rel="stylesheet" href="../css/estilos.css">
+   <link rel="stylesheet" href="../css/estilos.css">
 </head>
 <body>
     <div class="container">
+        <img src="../documentos/SanBenitoMenni.png" alt="San Benito Menni" width="120" style="display:block; margin:auto;">
         <h2>Inicio de Sesión</h2>
             <form action="../controllers/loginController.php" method="POST">
                 <label>Usuario:</label>
