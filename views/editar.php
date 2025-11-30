@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <option value="4" <?= $doc['categoria_id']==4?'selected':'' ?>>Cartas</option>
                 <option value="5" <?= $doc['categoria_id']==5?'selected':'' ?>>PDFs</option>
                 <option value="6" <?= $doc['categoria_id']==6?'selected':'' ?>>Fotos y Videos</option>
-                <option value="7" <?= $doc['categoria_id']==7?'selected':'' ?>>Rude/Boletines</option>
+                <option value="7" <?= $doc['categoria_id']==7?'selected':'' ?>>Libretas</option>
             </select>
         </div>
 

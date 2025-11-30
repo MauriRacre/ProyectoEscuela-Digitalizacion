@@ -29,7 +29,7 @@ if (!isset($_SESSION['id_usuario'])) {
                 <option value="4">Cartas</option>
                 <option value="5">PDFs</option>
                 <option value="6">Fotos y Videos</option>
-                <option value="7">Rude/Boletines</option>
+                <option value="7">Libretas</option>
             </select><br>
 
             <label>Archivo:</label>

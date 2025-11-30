@@ -18,7 +18,7 @@
 
             <label>Rol:</label>
             <select name="rol">
-                <option value="estudiante">Estudiante</option>
+                <option value="estudiante">Profesora</option>
                 <option value="admin">Administrador</option>
             </select><br>
 
